@@ -220,45 +220,66 @@
 }
 
 /* ACtivities */
-
-.slideshow-container {
-    max-width: 1300px;
-    position: relative;
-    margin: auto;
+.activities {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(194, 194, 194);
+    flex-direction: column;
+}
+
+.activities__title{
+    font-size: 4rem;
+    background-size: 100%;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    margin: 0 50px 0 50px;
+}
+
+.slideshow__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1300px;
+    margin: auto;
   }
 
 .slide {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 700px;
     width: 900px;
-    background: rgb(194, 194, 194);
+    background: rgb(231, 231, 231);
 }
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: #80e4ed;
+    color: #00646d;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 2rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    margin: 0 25px;
   }
 
   .next {
-    right: 0;
     border-radius: 3px 0 0 3px;
   }
 
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.8);
   }
 
   .dot {
@@ -288,4 +309,37 @@
 
 .slide__heading {
     font-size: 2rem;
+}
+
+.slide img{
+    object-fit: contain;
+    height: 300px;
+    width: 800px;
+    margin: 25px 50px;
+}
+
+.slide__heading{
+    align-self: center;
+    justify-self: center;
+    font-size: 3rem;
+    background-size: 100%;
+    color: #000046;
+    background-color: #000046;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    padding: 25px;
+    margin: 5px 300px;
+}
+.slide__content{
+    font-size: 1.5rem;
+    background-size: 100%;
+    background: rgb(43, 43, 43);
+    color: rgb(43, 43, 43);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    padding: 25px;
 }
